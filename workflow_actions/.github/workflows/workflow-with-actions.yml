@@ -1,0 +1,16 @@
+name: Workflow With Actions
+on: push
+jobs:
+  my-first-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code from Repository
+        uses: actions/checkout@v3
+      - name: Install Nodejs
+        uses: actions/steup_node@v3
+        with:
+          node-version: 18
+      - name: Install packages
+        run: npm ci
+      - name: Test app
+        run: npm test 

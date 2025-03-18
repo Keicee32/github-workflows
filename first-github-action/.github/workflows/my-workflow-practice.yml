@@ -1,0 +1,8 @@
+name: First-Workflow
+on: workflow_dispatch
+jobs:
+  my-first-workflow:
+    runs-on: ubuntu:latest
+    steps:
+      - name: Print my name
+        run: echo "Hello Kelechi" # Defines cmd to execute in the cmdline. Scripts or cmd can be ran.
